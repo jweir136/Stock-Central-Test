@@ -8,3 +8,5 @@
 ![No Maintence Badge](http://unmaintained.tech/badge.svg)
 
 Stock Central is a large, full scale social media app for investors. Day traders, institutional investors, and hobbiest alike can come together and share their latest trades, trending companies, and breaking financial news.
+
+![Demo Image](demo-images/Stock-Central-SignIn-Page.png)
