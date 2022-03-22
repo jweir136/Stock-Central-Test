@@ -5,19 +5,19 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyB7KxvbbZdC6IA_rsvsQaiYxNLN2pwhovI",
-    authDomain: "cs1530g4-project.firebaseapp.com",
-    projectId: "cs1530g4-project",
-    storageBucket: "cs1530g4-project.appspot.com",
-    messagingSenderId: "675042722546",
-    appId: "1:675042722546:web:21e64eb5046dcdf9ef066b",
-    measurementId: "G-LL3BJXLGFL"
+    apiKey: process.env["apiKey"],
+    authDomain: process.env["domain"],
+    projectId: process.env["projectID"],
+    storageBucket: process.env["bucket"],
+    messagingSenderId: process.env["senderID"],
+    appId: process.env["appID"],
+    measurementId: process.env["measureID"]
   },
   // IEX Cloud stuff
-  IEX_SANDBOX_KEY: "Tpk_12e6eee6ed7d4026a0a87dee063b86bd",
-  IEX_BASE_SANBOX_URL: 'https://sandbox.iexapis.com/stable/',
-  IEX_CLOUD_KEY: 'pk_4a09995ad6854e28a38018bdd36eb410',
-  IEX_BASE_CLOUD_URL: 'https://cloud.iexapis.com/stable/',
+  IEX_SANDBOX_KEY: process.env["iexKey"],
+  IEX_BASE_SANBOX_URL: process.env["iexSandboxURL"],
+  IEX_CLOUD_KEY: process.env["iexCloudKey"],
+  IEX_BASE_CLOUD_URL: process.env["iexCloudURL"],
 
   API_BASE_URL: 'http://localhost:3000/api'
 };
