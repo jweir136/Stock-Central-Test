@@ -1,0 +1,21 @@
+<div class="overlay">
+    <div class="popup">
+        <a class="close" (click)="closePopup()">&times;</a>
+        <button *ngIf="followButtonText == 'FOLLOW'" class="FollowButton" (click)="followStock()">{{followButtonText}}</button>
+        <button *ngIf="followButtonText == 'FOLLOWING'" class="FollowButton" (click)="unfollowStock()">{{followButtonText}}</button>
+        <button *ngIf="followButtonText == 'LOADING'" class="FollowButton">{{followButtonText}}</button>     
+        <div class = "leftSide">
+            <img class="logo" src="{{stockLogo}}" alt="logo">
+            <div class="CompanyName">{{companyName}}</div>
+
+            <br>
+            <div class="price">${{latestPrice}}</div>
+            <div class="info">
+                <div class="amount">${{changeAmt}}</div>
+                <div class="separator"></div>
+                <div class="percent">{{changePercent}}%</div>
+            </div>
+        </div>
+        <a class="newsButton" href="{{stockNewsURL1}}" target="_blank">Company News</a>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+.create-post-button {
+    background: rgb(80, 170, 95);
+    outline: none;
+    border-radius: 37.5px;
+    height: 75px;
+    width: 75px;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    top: -15vh;
+    right: -45vw;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y:hidden;
+    
+}
+
+.create-post-button > button {
+    position: absolute;
+}
+
+.create-post-button span.greeting {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    position: relative;
+    top: -25%;
+    padding-left: 23%;
+    padding-right: 10%;
+    font-size: 70px;
+}
+
+.create-post-button:hover{
+    cursor: pointer;
+    background-color:rgb(98, 192, 113);
+    transition: all 0.25s ease-in-out
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    z-index: 50;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.popup {
+    background: white;
+    border-radius: 10px;
+    width: 40vw;
+    height: 40vh;
+    position: relative;
+    color:black;
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    top: 20vh;
+    left: 30vw;
+    text-align: center;
+    animation: fadeInSlide;
+    animation-duration: 0.5s ease-in-out;
+
+    .UploadButton {
+        height: 7vh;
+        width: 10vw;
+        bottom: 1vh;
+        right: 2vh;
+        position: absolute;
+        background-color:rgb(80, 170, 95);
+        color:white;
+        font-family: 'Baloo 2', cursive;
+        border: none;
+        border-radius: 10px;
+        font-size: 4vh;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color:rgb(80, 170, 95);
+            transition: 0.15s ease-in-out;
+            border: solid 2px rgb(80, 170, 95);
+        }
+    }
+
+    .body {
+        height: 20vh;
+        width: 30vw;
+        border-radius: 5px;
+        align-items: center;
+        font-family: 'Baloo 2', cursive;
+    }
+
+}
+
+@keyframes fadeInSlide {
+    from {opacity: 0;
+          top: 30vh;}
+    to {opacity: 100;
+        top: 20vh;}
+}
+
+.popup .close {
+    position: relative;
+    top: -0.5vh;
+    float: left;
+    left: 1vw;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(80, 170, 95);
+}
+
+.popup .close:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+    .popup{
+        width: 70%;
+    }
+}
+
+.popup closeButton{
+    padding:5px 10px;
+    background: rgb(56, 119, 66);
+    border: none;
+    height: 20px;
+    width: 60px;
+    position: relative;
+    border-radius:2px;
+    text-align:center;
+    bottom: 10px;
+    transition: all 0.4s ease 0s;
+}
+
+.popup closeButton:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: all 0.4s ease 0s;
+}
+
+.popup closeButton.transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    padding: 0px;
+}
+
+.popup closeButton.transparent span {
+    margin-left: 10px;
+}
+
+.popup .closeButton:hover {
+    cursor: pointer;
+}
+

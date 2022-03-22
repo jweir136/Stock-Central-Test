@@ -1,0 +1,32 @@
+.main-page-container {
+    overflow-y: hidden; /* will contain if #first is longer than #second */
+}
+
+.stock-scroll {
+    width: 20vw;
+    float:left; /* add this */
+}
+
+.separator {
+    height: 75vh;
+    width: 0.1vw;
+    background-color: lightgray;
+    position: fixed;
+    left: 22vw;
+    top: 20vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 5px 7px 29px 0px;
+}
+
+.post-scroll {
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+
+}
+
+.create-post-button {
+    position: fixed;
+    right: 46vw;
+    top: 98vh;
+
+}
+
+

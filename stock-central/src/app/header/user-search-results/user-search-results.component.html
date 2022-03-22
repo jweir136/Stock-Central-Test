@@ -1,0 +1,12 @@
+<div class="overlay">
+    <div class="popup">
+        <a class="close" (click)="closePopup()">&times;</a>
+        <button *ngIf="followButtonText == 'FOLLOW'" class="FollowButton" (click)="followUser()">{{followButtonText}}</button>
+        <button *ngIf="followButtonText == 'FOLLOWING'" class="FollowButton" (click)="unfollowUser()">{{followButtonText}}</button>
+        <button *ngIf="followButtonText == 'LOADING'" class="FollowButton">{{followButtonText}}</button>     
+        <div class = "leftSide">
+            <img class="logo" src="{{profilePic}}" alt="logo">
+            <div class="CompanyName">{{getUsername()}}</div>
+        </div>
+    </div>
+</div>

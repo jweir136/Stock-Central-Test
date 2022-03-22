@@ -1,0 +1,145 @@
+.stockCard {
+  font-family: 'Baloo 2', cursive;
+  height: 8.5vh;
+  width: 18vw;
+  left: 1vw;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 5px;
+}
+
+.stockCard {
+  .tickerCircle {
+    background-color: rgb(147, 231, 161);
+    height: 8.5vh;
+    width: 5vw;
+    border-radius: 25px;
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .circleLabel {
+      font-size: 18px;
+      color:rgb(56, 119, 66);
+      text-overflow: clip;
+      text-align: center;
+      height: 5vh;
+      width: 5vw;
+      left: 0vw;
+      top: 1.7vh;
+      position: absolute;
+    }
+
+  }
+}
+
+.popup {
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  position: absolute;
+  float: left;
+  z-index: 10;
+  top: 8.5vh;
+  left: 1vw;
+  width: 16vw;
+  height: 22vh;
+  opacity: 1;
+  animation: popupEnter;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  font-family: 'Baloo 2', cursive;
+
+  .popupHeader {
+    float: top;
+    position: absolute;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    top: 0;
+    width: 16vw;
+    height: 6vh;
+    background-color: rgb(147, 231, 161);
+    z-index: 15;
+  }
+
+
+}
+.popup a.close {
+  z-index: 20;
+  left: 0.75vw;
+  top: -1vh;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 200;
+  color:rgb(56, 119, 66);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+.popupHeader span.companyName {
+  position: absolute;
+  left: 2vw;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 14vw;
+  height: 6vh;
+  white-space: nowrap;
+  top: 1vh;
+  font-family: 'Baloo 2', cursive;
+}
+
+.popup span.trendData {
+  position: absolute;
+  left: 2vw;
+  top: 10vh;
+}
+.popup span.unfollowStock {
+  position: absolute;
+  left: 2vw;
+  top: 17vh;
+  background-color:rgb(147, 231, 161);
+  height: 4vh;
+  width: 12vw;
+  border-radius: 10px;
+
+  span.unfollowLabel {
+    left: 2vw;
+    top: 0vh;
+    z-index: 30;
+    position: absolute;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes popupEnter {
+  from {top: 12.5vh;
+        opacity: 0;}
+  to {top: 8.5vh;
+      opacity: 1;}
+}
+
+.stockCard span.label {
+  text-align: right;
+  top: 1vh;
+  left: 5.5vw;
+  position: relative;
+  color: rgb(56, 119, 66);
+  font-weight: 700;
+  font-size: 18px;
+  text-overflow: clip;
+
+  span.material-icons {
+    top: 1vh;
+    position: relative;
+  }
+}

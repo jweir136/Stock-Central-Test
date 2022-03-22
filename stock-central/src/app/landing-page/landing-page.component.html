@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="greeting">
+        Sign In
+    </div>
+    <div class="line1"></div>
+    <div class="line2"></div>
+
+    <input class="usernameInput" type="text" placeholder="Email" id="signInEmail">
+    <div class="usernameLine"></div>
+    <input class="passwordInput" type="password" placeholder="Password" id="signInPassword" (keyup.enter)="signIn()">
+    <div class="passwordLine"></div>
+
+    <div class="signInButton" type="button" (click)="signIn()">
+        Sign In
+    </div>
+
+    <p>Don't have an account?
+    <div class="signUpButton" type="button" (click)="popup=true">
+        Sign Up
+    </div>
+
+    <div class="signInWGButton" type="button">
+        <button type="button" class="btn googleBtn" (click)="authenticationService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            <span class="text">
+            Sign in with Google
+            </span>
+        </button>
+    </div>
+</div>
+
+<div class="popup" *ngIf="popup">
+    <div class="popupContainer">
+        <div class="popupGreeting">
+            Sign Up
+        </div>
+
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+
+        <input class="popupFirstNameInput" type="text" placeholder="firstName" id="firstName">
+        <div class="popupFirstNameLine"></div>
+        <input class="popupLastNameInput" type="text" placeholder="lastName" id="lastName">
+        <div class="popupLastNameLine"></div>
+        <input class="popupUsernameInput" type="text" placeholder="Username" id="Username">
+        <div class="popupUsernameLine"></div>
+        <input class="popupEmailInput" type="text" placeholder="Email" id="Email">
+        <div class="popupEmailLine"></div>
+        <input class="popupPasswordInput" type="password" placeholder="Create Password" id="Password">
+        <div class="popupPasswordLine"></div>
+
+        <div class="registerButton" type="button" (click)="signUp()">
+            Register
+        </div>
+
+        <div class="returnToSignIn" type="button" (click)="popup=false">
+            Return to Sign Up
+        </div>
+
+
+    </div>
+</div>

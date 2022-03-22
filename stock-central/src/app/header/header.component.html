@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    </head>
+</html>
+
+<div class="header-container">
+    <span class="branding">
+        Stock Central
+    </span>
+    <span class = "logo">
+        <i class="fa fa-line-chart" style="font-size:30px"></i>
+    </span>
+    <span class = "search-box" *ngIf="(userLoggedIn$ | async)">
+        <div class="searchFor">Search For:</div>
+        <select class="dropDown" id="ddlViewBy">
+              <option *ngFor="let item of dataList;let i = index" value="{{item.code}}" [selected]="i == 0">
+                {{item.name}}
+              </option>
+        </select>
+        <div class="container">
+            <input type="text" placeholder="Type to search" id="searchBar" (keyup.enter)="search()" (keypress)="autocomplete($event)" (keyup)="checkInput()">
+            <div class="search"></div>
+        </div>
+    </span>
+    <div class="autocompleteResults" *ngIf="autocompleteResults">
+        <div *ngIf="checkDropDown() == '1'">
+            <div class="results" *ngFor="let tickerSymbol of tickerSymbols">
+                <button class="res" (click)="setInput(getSymbol(tickerSymbol)); search()">{{getSymbol(tickerSymbol)}}</button>
+            </div>
+        </div>
+        <div *ngIf="checkDropDown() == '2'">
+            <div class="results" *ngFor="let user of users let i = index" [attr.data-index]="i">
+                <button class="res" (click)="setUserIndex(i); search()">{{getUsername(user)}}</button>
+            </div>
+        </div>
+    </div>
+    <span *ngIf="popup">
+        <div *ngIf="checkDropDown() == '1'">
+            <app-search-results (closePopupEvent)="popup=false" [input]="getInput()"></app-search-results>
+        </div>
+        <div *ngIf="checkDropDown() == '2'">
+            <app-user-search-results (closePopupEvent)="popup=false" [user]="users[userIndex]"></app-user-search-results>
+        </div>
+    </span>
+    <span  *ngIf="(userLoggedIn$ | async)" class="profileButton">
+        <app-user-profile class="button"></app-user-profile>
+    </span>
+</div>
+  

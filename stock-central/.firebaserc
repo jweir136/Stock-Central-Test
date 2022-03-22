@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cs1530g4-project": {
+      "hosting": {
+        "stock-central": [
+          "cs1530g4-project"
+        ]
+      }
+    }
+  }
+}

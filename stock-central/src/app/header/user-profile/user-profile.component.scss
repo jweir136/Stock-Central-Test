@@ -1,0 +1,294 @@
+.profile-button {
+    background: rgb(80, 170, 95);
+    outline: none;
+    border-radius: 10px;
+    position: relative;
+    width: 10vw;
+    height: 6vh;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+    top: -0.1vh;
+}
+
+.profile-button > button {
+    position: absolute;
+}
+
+.profile-button span.greeting {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    position: relative;
+    top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 16px;
+}
+
+.profile-button:hover{
+    cursor: pointer;
+    background-color:rgb(98, 192, 113);
+    transition: all 0.25s ease-in-out
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInSlide {
+    from {opacity: 0;
+          top: 30vh;}
+    to {opacity: 1;
+        top: 15vh;}
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 20vw;
+    height: 30vh;
+    position: relative;
+    transition: all 5s ease-in-out;
+    color: rgb(80, 170, 95);
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    top: 15vh;
+    text-align: center;
+    animation: fadeInSlide;
+    animation-duration: 0.5s;
+
+}
+
+.popup span.editButton {
+    position: absolute;
+    font-size: 16px;
+    color:rgb(80, 170, 95);
+    top: 1vh;
+    right: 2vw;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.popup .close {
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(80, 170, 95);
+}
+
+.popup .close:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.Name {
+    border-radius: 2vh;
+    width: 22vw;
+    height: 6vh;
+    position: absolute;
+    right: 0.5vw;
+    top: 14vh;
+    font-size: 18px;
+}
+
+.Username {
+    border-radius: 2vh;
+    width: 22vw;
+    height: 6vh;
+    position: absolute;
+    right: 0.5vw;
+    top: 19vh;
+    font-size: 18px;
+}
+
+.joinDate {
+    border-radius: 2vh;
+    width: 22vw;
+    height: 6vh;
+    position: absolute;
+    right: 0.5vw;
+    top: 24vh;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 700px){
+    .popup{
+        width: 70%;
+    }
+}
+
+.circle {
+    background-color: white;
+    height: 25vh;
+    width: 25vh;
+    border-radius: 12.5vh;
+    top: -13.5vh;
+    position: absolute;
+    align-items: center;
+    left: 5.75vw;
+}
+
+.popup .closeButton{
+    background: white;
+    border: solid 2.5px rgb(56, 119, 66);
+    height: 5.5vh;
+    width: 12vw;
+    position: absolute;
+    border-radius:3vh;
+    text-align:center;
+    bottom: 0.5vh;
+    left: 5vw;
+    transition: all 0.4s ease 0s;
+}
+
+.popup .closeButton:hover{
+    cursor: pointer;
+    background:rgb(56, 119, 66);
+    color: white;
+    transition: all 0.4s ease 0s;
+}
+
+.popup .closeButton.transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    padding: 0px;
+}
+
+.popup .closeButton.transparent span {
+    margin-left: 10px;
+}
+
+.editButton span {
+    float: left;
+    margin-top: 15px;
+}
+
+.profilePicture {
+    height: 22vh;
+    width: 22vh;
+    border-radius: 11vh;
+    top: -12vh;
+    position: absolute;
+    left: 6.4vw;
+}
+
+.profilePicture:hover {
+    cursor: pointer;
+}
+
+.editmenu {
+    .first {
+        position: absolute;
+        left: 1vw;
+        top: 8vh;
+    }
+    .ifirst {
+        background-color:rgb(241, 255, 243);
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 13vh;
+        left: 9vw;
+    }
+    .second {
+        position: absolute;
+        left: 1vw;
+        top: 13vh;
+    }
+    .isecond {
+        background-color:rgb(241, 255, 243);
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 18vh;
+        left: 9vw;
+    }
+    .third {
+        position: absolute;
+        left: 1vw;
+        top: 18vh;
+    }
+    .ithird {
+        background-color:rgb(241, 255, 243);
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 23vh;
+        left: 9vw;
+    }
+    
+    .save{
+        font-family: 'Baloo 2', cursive;
+        font-size: 20px;
+        color:rgb(80, 170, 95);
+        background: white;
+        border: solid 2.5px rgb(56, 119, 66);
+        height: 6.5vh;
+        width: 12.5vw;
+        position: absolute;
+        border-radius:3vh;
+        text-align:center;
+        bottom: 0.5vh;
+        left: 5vw;
+        z-index: 100;
+        transition: all 0.4s ease 0s;
+    }
+
+    .save:hover{
+        cursor: pointer;
+        background:rgb(56, 119, 66);
+        color: white;
+        transition: all 0.4s ease 0s;
+    }
+
+    .save.transparent {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline:none;
+        color: white;
+        padding: 0px;
+    }
+
+    .save.transparent span {
+        margin-left: 10px;
+    }
+}
+
+  

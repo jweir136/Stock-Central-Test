@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> account button font </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+</html>
+
+<div class="profile-button" type="button" title="Click to View Profile Details" (click)="popup=true">
+    <span class = "greeting">
+        Hello {{userFirstName}}
+    </span>
+</div>
+
+<div class="overlay" *ngIf="popup">
+    <div class="popup">
+        <a class="close" (click)="popup=false; edit = false">&times;</a>
+        <div class="circle"></div>
+        <img class="profilePicture" src="{{userPhotoUrl}}" alt="user profile picture" width="100" height="100">
+        <br>
+        <br>
+        <div *ngIf="!edit">
+            <span class="editButton" type="button" (click)="edit = true">
+                Edit
+            </span>
+            <div class="Name">
+                Name: {{userFirstName}} {{userLastName}}
+            </div>
+            <div class = "Username">
+                Username: {{username}}
+            </div>
+            <div class="joinDate">
+                Joined Stock Central: {{createdAt}}
+            </div>
+        </div>
+        <div class="editmenu" *ngIf="edit">
+            <p class="first">First Name:</p>
+            <input class= "ifirst" type="text" id="editFirstName" value="{{userFirstName}}">
+            <p class="second">Last Name:</p>
+            <input class="isecond" type="text" id="editLastName" value="{{userLastName}}">
+            <p class="third">User Name:</p>
+            <input class="ithird" type="text" id="editUsername" value="{{username}}">
+            <button class="save" (click)="saveProfileEdit()">Save</button>
+        </div>
+        <div class="closeButton" type="button"(click)="authenticationService.signOut()" *ngIf="!edit">
+            Sign Out
+        </div> 
+    </div>
+</div>
+

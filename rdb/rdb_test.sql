@@ -1,0 +1,1 @@
+INSERT INTO users (username, first_name, last_name, age, email) VALUES ('testUser', 'testF', 'testL', 12, 'test@gmail.com');

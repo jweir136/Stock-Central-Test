@@ -1,0 +1,215 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInSlide {
+    from {opacity: 0;
+          top: 40vh;}
+    to {opacity: 1;
+        top: 15vh;}
+}
+
+.popup {
+    background: white;
+    border-radius: 10px;
+    width: 25vw;
+    height: 65vh;
+    color: rgb(80, 170, 95);
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    position: absolute;
+    animation: fadeInSlide;
+    animation-duration: 0.5s;
+    left: 37.5vw;
+    top: 15vh;
+
+    .FollowButton {
+        background-color:rgb(80, 170, 95);
+        border: none;
+        height: 7vh;
+        width: 15vw;
+        border-radius: 15px;
+        font-family: 'Baloo 2', cursive;
+        font-size: 4vh;
+        color: white;
+        position: absolute;
+        left: 5vw;
+        top: 47.5vh;
+
+        &:hover {
+            background-color: rgb(98, 192, 113);
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    .logo {
+        width: 10vw;
+        margin: 2vh auto;
+        height: 10vw;
+        border-radius: 5vw;
+        display: flex;
+        justify-content: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        image-resolution: from-image;
+    }
+
+    .CompanyName {
+        color: black;
+        font-size: 5vh;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0vh 1vw;
+    }
+
+    .price {
+        position: absolute;
+        text-align: center;
+        width: 25vw;
+        font-size: 5vh;
+        top: 33vh;
+
+    }
+
+    .info {
+        margin: 0vh auto;
+        text-align: center;
+        display: flex;
+        width: 25vw;
+        
+        .amount {
+            width:12.3vw;
+            text-align: right;
+            margin-right: 1vw;
+        }
+
+        .separator {
+            height: 4vh;
+            width: 0.1vw;
+            position: absolute;
+            top: 41vh;
+            left: 12.5vw;
+            border-radius: 0.05vw;
+            background-color: lightgray;
+            box-shadow: rgba(100, 100, 111, 0.2) 5px 7px 29px 0px;
+        }
+
+        .percent {
+            width:12.3vw;
+            text-align:left;
+            margin-left: 1vw;
+        }
+
+    }
+
+    .newsButton {
+        position: absolute;
+        height: 5vh;
+        width: 12vw;
+        top: 57vh;
+        left: 6.5vw;
+        text-align: center;
+        font-size: 3vh;
+        background-color: white;
+        color:rgb(80, 170, 95);
+        border: solid 0.25vh rgb(80, 170, 95);
+        border-radius: 3.5vh;
+        transition: all 0.25s ease-in-out;
+
+        &:link {
+            text-decoration: none;
+        }
+        &:hover {
+            text-decoration: none;
+            transition: all 0.25s ease-in-out;
+            background-color:rgb(98, 192, 113);
+            border: solid 0.25vh rgb(98, 192, 113);
+            color: white;
+        }
+        &:visited {
+            text-decoration: none;
+        }
+    }
+
+
+}
+
+.popup .close {
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(80, 170, 95);
+    z-index: 50;
+}
+
+.popup .close:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+    .popup{
+        width: 70%;
+    }
+}
+
+.popup closeButton{
+    padding:5px 10px;
+    background: rgb(56, 119, 66);
+    border: none;
+    height: 20px;
+    width: 60px;
+    position: relative;
+    border-radius:2px;
+    text-align:center;
+    bottom: 10px;
+    transition: all 0.4s ease 0s;
+}
+
+.popup closeButton:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: all 0.4s ease 0s;
+}
+
+.popup closeButton.transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    padding: 0px;
+}
+
+.popup closeButton.transparent span {
+    margin-left: 10px;
+}
+
+.popup .closeButton:hover {
+    cursor: pointer;
+}
+

@@ -1,0 +1,405 @@
+.signInWGButton {
+    button {
+      background: rgb(127, 216, 142);
+      border: 6px solid rgb(127, 216, 142);
+      outline: none;
+      border-radius: 10px;
+      height: 10vh;
+      width: 35vw;
+      position: absolute;
+      transition: all 0.25s ease-in-out;
+      top: 60vh;
+      right: 0px;
+      left: 7.5vw;
+      align-self: center; 
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+  }
+
+  .signInWGButton span.text {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2vw;
+  }
+
+.signInButton {
+  background-color:rgb(80, 170, 95);
+  border: 3px solid rgb(80, 170, 95);
+  color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 2vw;
+  text-align: center;
+  height: 7.5vh;
+  width: 16vw;
+  border-radius: 10px;
+  position: absolute;
+  top: 50vh;
+  left: 7.5vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.signUpButton {
+  border: 3px solid rgb(80, 170, 95);
+  border-radius: 10px;
+  color:rgb(80, 170, 95);
+  background-color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 2vw;
+  text-align: center;
+  height: 7.5vh;
+  width: 16vw;
+  border-radius: 10px;
+  position: absolute;
+  top: 50vh;
+  left: 26vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.returnToSignIn {
+    border: 3px solid rgb(80, 170, 95);
+    border-radius: 10px;
+    color:rgb(80, 170, 95);
+    background-color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 2vw;
+    text-align: center;
+    height: 7.5vh;
+    width: 16vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 65vh;
+    left: 17vw;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+p {
+  top: 44.5vh;
+  left: 29.5vw;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1vw;
+  position: absolute;
+}
+
+.container {
+  border-color: black;
+  border-width: 10px;
+  height: 70vh;
+  width: 50vw;
+  top: 12vh;
+  left: 23vw;
+  position: absolute;
+  animation: page-enter;
+  animation-duration: 0.25s;
+}
+
+.greeting {
+  font-size: 4vw;
+  font-family: 'Baloo 2', cursive;
+  color: black;
+  position: absolute;
+  top: 6vh;
+  left: 18.5vw;
+}
+
+
+.line1 {
+  width: 3vw;
+  background-color:rgb(80, 170, 95);
+  height: 0.75vh;
+  top: 16.5vh;
+  position: absolute;
+  border-radius: 0.375vh;
+  left: 18.5vw;
+}
+
+.line2 {
+  width: 7vw;
+  background-color:rgb(80, 170, 95);
+  height: 0.75vh;
+  top: 16.5vh;
+  position: absolute;
+  border-radius: 0.375vh;
+  left: 23.7vw;
+}
+
+.usernameInput {
+  position:absolute;
+  top: 25vh;
+  left: 12.5vw;
+  height: 6vh;
+  width: 30vw;
+  border: none;
+  outline: none;
+  font-size: 2vw;
+  font-family: 'Baloo 2', cursive;
+
+}
+
+.usernameLine {
+  position:absolute;
+  top: 25vh;
+  left: 11.5vw;
+  height: 6.5vh;
+  width: 0.25vw;
+  background-color:rgb(80, 170, 95);
+  border-radius: 0.25vw;
+  border: none;
+}
+
+.passwordLine {
+  position:absolute;
+  top: 35vh;
+  left: 11.5vw;
+  height: 6.5vh;
+  width: 0.25vw;
+  background-color:rgb(80, 170, 95);
+  border-radius: 0.25vw;
+  border: none;
+}
+
+.passwordInput {
+  position: absolute;
+  top: 35vh;
+  left: 12.5vw;
+  height: 6vh;
+  width: 30vw;
+  outline: none;
+  border: none;
+  font-size: 2vw;
+  font-family: 'Baloo 2', cursive;
+}
+
+.popup {
+  .popupContainer {
+    border-color: black;
+    border-width: 10px;
+    background-color: white;
+    height: 70vh;
+    width: 50vw;
+    top: 12vh;
+    left: 23vw;
+    position: absolute;
+    z-index: 5;
+    animation: page-enter;
+    animation-duration: 0.25s;
+  }
+
+  .popupGreeting {
+    font-size: 4vw;
+    font-family: 'Baloo 2', cursive;
+    color: black;
+    position: absolute;
+    top: 6vh;
+    left: 18.5vw;
+  }
+
+  .line3 {
+    width: 3vw;
+    background-color:rgb(80, 170, 95);
+    height: 0.75vh;
+    top: 16.5vh;
+    position: absolute;
+    border-radius: 0.375vh;
+    left: 18.5vw;
+  }
+
+  .line4 {
+    width: 5.5vw;
+    background-color:rgb(80, 170, 95);
+    height: 0.75vh;
+    top: 16.5vh;
+    position: absolute;
+    border-radius: 0.375vh;
+    left: 23.7vw;
+  }
+
+  .line5 {
+    width: 2vw;
+    background-color:rgb(80, 170, 95);
+    height: 0.75vh;
+    top: 16.5vh;
+    position: absolute;
+    border-radius: 0.375vh;
+    left: 30.4vw;
+  }
+
+  .popupUsernameInput {
+    position:absolute;
+    top: 25vh;
+    left: 6vw;
+    height: 6vh;
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupUsernameLine {
+    position:absolute;
+    top: 25vh;
+    left: 5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .popupFirstNameInput {
+    position:absolute;
+    top: 25vh;
+    left: 38.5vw;
+    height: 6vh;
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupFirstNameLine {
+    position:absolute;
+    top: 25vh;
+    left: 37.5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .popupLastNameInput {
+    position:absolute;
+    top: 35vh;
+    left: 38.5vw;
+    height: 6vh;
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupLastNameLine {
+    position:absolute;
+    top: 35vh;
+    left: 37.5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .popupAgeInput {
+    position:absolute;
+    top: 45vh;
+    left: 38.5vw;
+    height: 6vh;
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupAgeLine {
+    position:absolute;
+    top: 45vh;
+    left: 37.5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .popupEmailInput {
+    position:absolute;
+    top: 35vh;
+    left: 6vw;
+    height: 6vh;
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupEmailLine {
+    position:absolute;
+    top: 35vh;
+    left: 5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .popupPasswordInput {
+    position: absolute;
+    top: 45vh;
+    left: 6vw;
+    height: 6vh;
+    width: 30vw;
+    outline: none;
+    border: none;
+    font-size: 2vw;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .popupPasswordLine {
+    position:absolute;
+    top: 45vh;
+    left: 5vw;
+    height: 6.5vh;
+    width: 0.25vw;
+    background-color:rgb(80, 170, 95);
+    border-radius: 0.25vw;
+    border: none;
+  }
+
+  .registerButton {
+    background-color:rgb(80, 170, 95);
+    border: 3px solid rgb(80, 170, 95);
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 2vw;
+    text-align: center;
+    height: 7.5vh;
+    width: 16vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 55vh;
+    left: 17vw;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+@keyframes page-enter {
+  from{opacity: 0;}
+  to{opacity: 100;}
+}

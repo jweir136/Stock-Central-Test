@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+</html>
+
+<div class='post-card-container'>
+    <div class='post-card-header'>
+        <span class = "tickerCircle" type= "button">
+            <span class = 'tickerLabel'>
+                tick
+            </span>
+        </span>  
+        <div class='profile-image' (click)="showUserPage()">
+            <img src="https://cdn2.iconfinder.com/data/icons/facebook-51/32/FACEBOOK_LINE-01-512.png" alt="profile image">
+        </div>
+        <div class='post-username' type='button'>
+            {{username}}
+        </div>
+        <div class="Date">
+            {{month}}/{{day}}/{{year}} | {{hour}}:{{minute}}{{AMorPM}}
+        </div>
+    </div>
+    <div class="post-content">
+        <p>{{message}}</p>
+    </div>
+    <button class="LikeButton" *ngIf="!liked" (click)="likePost()">Like</button>
+    <button class="LikedButton" *ngIf="liked" (click)="unlikePost()">Liked</button>
+    <p class="numLikes">{{numOfLikes}}</p>
+    <div *ngIf="showUser">
+        <app-user-search-results (closePopupEvent)="showUser=false" [user]="user"></app-user-search-results>
+    </div>
+</div>
+<br>

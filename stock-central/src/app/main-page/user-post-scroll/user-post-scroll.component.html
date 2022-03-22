@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+</html>
+
+<div class="user-post-cards-container">
+    <div class="feedLabel">
+        Feed
+    </div>
+    <div class="block"></div>
+    <div class="line1"></div>
+    <div class="filler"></div>
+    <div *ngFor="let post of posts">
+        <app-user-post-card [post]=post [likedPosts]=likedPosts></app-user-post-card>
+    </div>
+</div>

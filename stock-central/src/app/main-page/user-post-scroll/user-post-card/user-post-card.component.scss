@@ -1,0 +1,157 @@
+.post-card-container {
+  float: left;
+  border: none;
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  width: 60vw;
+  border-radius: 10px;
+  clear: both;
+  margin-left: 0;
+  margin-bottom: 5vh;
+  height: 18vh;
+  top: 2vh;
+  left: 2vw;
+  bottom: 0;
+  right: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card-header {
+  float: left;
+  align-self: top;
+  background: rgb(56, 119, 66);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-left: 0;
+  height: 7vh;
+  width: 75vw;
+  top: -10vh;
+
+  .Date {
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-size: 3vh;
+    position: absolute;
+    right: 1vw;
+  }
+
+}
+
+.post-card-header span.tickerCircle {
+  background-color: white;
+  height: 6vh;
+  width: 5vw;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-overflow: clip;
+  z-index: 49;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span.tickerLabel {
+    float: right;
+    position: relative;
+    left: 50%;
+    z-index: 50;
+    font-family: 'Baloo 2', cursive;
+    font-size: 24px;
+    color: white;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+.profile-image img {
+  float: left;
+  align-self: top;
+  padding-top: 0.75vh;
+  padding-left: 0.5vh;
+  height: 6vh;
+  width: 6vh;
+  color: white;
+}
+
+.LikeButton {
+  height: 2vw;
+  width: 4vw;
+  border-radius: 2vw;
+  position: absolute;
+  border: none;
+  outline: none;
+  right: 3vw;
+  bottom: 3vh;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bolder;
+  color: rgb(80, 170, 95);
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.LikedButton {
+  height: 2vw;
+  width: 4vw;
+  border-radius: 2vw;
+  position: absolute;
+  border: none;
+  outline: none;
+  right: 3vw;
+  bottom: 3vh;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(80, 170, 95);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.numLikes {
+  font-family: 'Baloo 2', cursive;
+  position: absolute;
+  right: 1.2vw;
+  bottom: -0.5vh;
+  font-size: 18px;
+  color:rgb(56, 119, 66)
+}
+
+.post-username {
+  float: left;
+  align-self: top;
+  padding-top: 0.7vh;
+  padding-left: 1vh;
+  height: 7vh;
+  width: relative;
+  font-size: 4vh;
+  font-family: 'Baloo 2', cursive;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.post-content p {
+  font-family: 'Khula', sans-serif;
+  color: black;
+  font-size: 3vh;
+  position: relative;
+  left: 0.5vw;
+  top: 4vh;
+  width: 50vw;
+}

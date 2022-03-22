@@ -1,0 +1,13 @@
+<div class = "fullWebPage">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div *ngIf="!(userLoggedIn$ | async)">
+        <app-landing-page></app-landing-page>
+    </div>
+    <span *ngIf="(userLoggedIn$ | async)" class="mainPage">
+        <app-main-page></app-main-page>
+    </span>
+</div>
+
+

@@ -1,0 +1,18 @@
+.fullWebPage {
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.mainPage {
+    position: absolute;
+    margin-top:8vh;
+}
