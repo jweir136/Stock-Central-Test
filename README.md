@@ -12,5 +12,3 @@ Stock Central is a large, full scale social media app for investors. Day traders
 ![Demo Image](demo-images/Stock-Central-SignIn-Page.png)
 
 NOTE: Trying to view this website locally will result in an error. The website depends on several APIs, including IEX, AlpacaAI, and Firebase. The private keys for those services have been ommited from this repo for security and privacy reasons. Additionally, I allowed the subscriptions for many of these services to lapse, since they were starting to add up. However, there are demo images includes, and the source code is available to the public.
-
-Another Note: A small part of this project was a group effort. A small amount help was used in creating the unit tests and some of the user interface.
